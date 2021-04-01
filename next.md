@@ -2,8 +2,6 @@
 
 O Next é uma ferramenta de SSR/SSG para o React.
 
-SSR: Server Side Rendering
-
 Para criar um projeto com Next
 
 ```bash
@@ -17,3 +15,11 @@ Adicionar typescript basta alterar a extensão dos arquivos e adicionar as depen
 ```bash
 yarn add --dev typescript @types/react @types/node
 ```
+
+## SSR: Server Side Rendering
+
+Para falar que uma página será renderizada em SSR, ou seja, dentro do servidor node do NextJs, precisamos exportar dentro do componente a função getServerSideProps
+
+O código React só irá renderizar após o getServerSideProps executar, ou seja, tome cuidado com o tipo de ação executava, se ela demorar o usuário irá demorar para visualizar a página.
+
+Os dados adquiridos na getServerSideProps são os que necessariamente precisam estar na página em um primeiro momento.
