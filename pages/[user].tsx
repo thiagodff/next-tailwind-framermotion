@@ -1,8 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
 export default function UserParams({ username }) {
+  // precisamos verificar se o window existe para poder utilizar
+  // o window.addEventListener por exemplo
   const isBrowser = typeof window !== "undefined";
-  // e assim podemos verificar para poder utilizar window.addEventListener por ex
 
   return <div>User via params: {username}</div>;
 }
@@ -10,10 +11,17 @@ export default function UserParams({ username }) {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     // aqui será definido paths pré carregados estaticamente, é obrigatório pelo menos um
+    // quando estive em produção o next irá criar novas páginas estáticas
+    // conforme elas forem sendo acessadas sem a necessidade de informar aqui nos paths
     paths: [
       {
         params: {
           user: "thiagodff",
+        },
+      },
+      {
+        params: {
+          user: "CarlosLevir",
         },
       },
     ],
