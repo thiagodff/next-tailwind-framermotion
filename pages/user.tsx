@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 
 export default function User({ username }) {
-  return <div>User: {username}</div>;
+  return <div>User ssss: {username}</div>;
 }
 
 // essa função irá rodar antes do componente como chamadas a apis

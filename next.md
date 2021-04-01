@@ -23,3 +23,15 @@ Para falar que uma página será renderizada em SSR, ou seja, dentro do servidor
 O código React só irá renderizar após o getServerSideProps executar, ou seja, tome cuidado com o tipo de ação executava, se ela demorar o usuário irá demorar para visualizar a página.
 
 Os dados adquiridos na getServerSideProps são os que necessariamente precisam estar na página em um primeiro momento.
+
+## SSG: Static Side Generating
+
+Criação de sites estáticos com NextJs.
+
+Basta exportar uma função chamada getStaticProps e irá funcionar de forma semelhante ao getServerSideProps, porém, ele irá executar essa função uma vez e irá gerar o arquivo do site estático correspondente.
+
+É recomendado para sites que não irão ser alterado ou raramente alterados pois essa alteração somente ocorrerá na hora do build.
+
+## Static
+
+São páginas estáticas geradas pelo NextJs, nesse caso basta criar a página sem exporta nenhuma função extra.
