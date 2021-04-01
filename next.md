@@ -8,7 +8,7 @@ Para criar um projeto com Next
 npx create-next-app app-name
 ```
 
-Cada arquivo da pasta pages é uma página da aplicação, dessa forma que é feito o roteamento
+Cada arquivo da pasta pages é uma página da aplicação, dessa forma que é feito o roteamento. Toda pasta e sub-pasta criada em pages é refletido na url.
 
 Adicionar typescript basta alterar a extensão dos arquivos e adicionar as dependências abaixo que assim que iniciar o projeto ele irá identificar que estamos usando typescript e ira realizar as configurações necessárias
 
@@ -35,3 +35,11 @@ Basta exportar uma função chamada getStaticProps e irá funcionar de forma sem
 ## Static
 
 São páginas estáticas geradas pelo NextJs, nesse caso basta criar a página sem exporta nenhuma função extra.
+
+## Parâmetros dinâmicos
+
+Basta criar uma página nomeada com [nome-parâmetro] para ter acesso à esse parâmetro via props e pode utiliza-lo na página.
+
+## Testes, Material UI, Styled-components
+
+Lembrando que NextJs roda por cima do React, sendo assim, essas libs acima funcionam da mesma forma.
